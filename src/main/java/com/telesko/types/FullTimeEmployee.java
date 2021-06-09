@@ -1,4 +1,4 @@
-package com.telesko.demo;
+package com.telesko.types;
 
 
 public class FullTimeEmployee extends Employee {
