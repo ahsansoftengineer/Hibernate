@@ -4,8 +4,11 @@ import java.util.*;
 import com.telesko.types.*;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class DemoCManyToMany {
+// 5. Embedable + OneToOne + OneToMany
+@SpringBootApplication
+public class DemoCOneToMany {
   public static void main(String[] args) {
     // In the Configuration We could have as many class as we want
     Configuration cfg =
@@ -17,7 +20,6 @@ public class DemoCManyToMany {
     Session session  = factory.openSession();
     Transaction transaction = session.beginTransaction();
 
-    // 5. Embedable + OneToOne + OneToMany
     Computer computer1  =  new Computer(1, "7th", "HP");
     Computer computer2  =  new Computer(2, "8th", "Lenovo");
     Computer computer3  =  new Computer(3, "9th", "Dell");

@@ -9,7 +9,7 @@ public class Computer {
   public int id;
   public String generation;
   public String model;
-  @ManyToOne
+  @OneToOne(mappedBy = "computer")
   public Employee employee;
   public Computer(){}
   public Computer(int id, String generation, String model){

@@ -8,7 +8,7 @@ import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// One To Many
+// 4. Embedable + OneToOne
 @SpringBootApplication
 public class DemoBOneToOne {
   public static void main(String[] args) {
@@ -20,11 +20,10 @@ public class DemoBOneToOne {
     SessionFactory factory = cfg.buildSessionFactory(); // Deprecated
     Session session  = factory.openSession();
     Transaction transaction = session.beginTransaction();
-    // 4. Embedable + OneToOne
-    Computer computer = new Computer(2, "7th", "HP");
+    Computer computer = new Computer(1, "7th", "HP");
     Employee employee = new Employee(
       1, "Rukhsana", "Female",
-      new Address("8th", "Karachi", 74900),
+      new Address("8th Floor", "Karachi", 74900),
       computer
     );
     session.save(computer);

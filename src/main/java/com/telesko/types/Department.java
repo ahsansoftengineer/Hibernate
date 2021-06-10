@@ -1,5 +1,6 @@
 package com.telesko.types;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -11,13 +12,15 @@ public class Department {
   public int id;
   public String name;
   @OneToMany(mappedBy = "department") // This is the Reference of Employee.department
-  public List<Employee> employees;
+  public List<Employee> employee = new ArrayList<Employee>();
   public Department(){}
   public Department(int id, String name, List<Employee> employees){
     this.id = id;
     this.name = name;
-
-    this.employees = employees;
+    this.employee = employees;
   }
-  // @ManyToMany
+  @Override
+  public String toString(){
+    return this.id + " : " + this.name + " : " + this.employee; 
+  }
 }
