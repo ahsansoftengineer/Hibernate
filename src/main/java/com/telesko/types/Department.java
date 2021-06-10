@@ -14,6 +14,10 @@ public class Department {
   @OneToMany(mappedBy = "department") // This is the Reference of Employee.department
   public List<Employee> employee = new ArrayList<Employee>();
   public Department(){}
+  public Department(int id, String name){
+    this.id = id;
+    this.name = name;
+  }
   public Department(int id, String name, List<Employee> employees){
     this.id = id;
     this.name = name;

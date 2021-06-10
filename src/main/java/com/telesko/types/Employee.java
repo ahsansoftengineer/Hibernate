@@ -17,9 +17,9 @@ public class Employee {
   @Transient // Don't Include the in the Database Table
   private String calculateAge;
 
-  private Address address; // This will Save Address in the Employee Table
+  public Address address; // This will Save Address in the Employee Table
   @OneToOne // This will Create Two Different Table
-  private Computer computer;
+  public Computer computer;
   @ManyToOne // Here We don't required mappedby Parameter it will be done by Department
   public Department department;
   @ManyToMany(mappedBy = "employee")
