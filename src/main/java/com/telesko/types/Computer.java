@@ -19,6 +19,6 @@ public class Computer {
   }
   @Override
   public String toString(){
-    return id + " : " + generation + " : " + model;
+    return " Computer : { " + id + " : " + generation + " : " + model + " }";
   }
 }

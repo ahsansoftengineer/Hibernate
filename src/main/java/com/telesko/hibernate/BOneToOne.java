@@ -1,4 +1,4 @@
-package com.telesko.demo;
+package com.telesko.hibernate;
 
 import com.telesko.types.Address;
 import com.telesko.types.Computer;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // 4. Embedable + OneToOne
 @SpringBootApplication
-public class DemoBOneToOne {
+public class BOneToOne {
   public static void main(String[] args) {
     // In the Configuration We could have as many class as we want
     Configuration cfg =

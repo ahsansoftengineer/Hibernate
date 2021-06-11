@@ -26,7 +26,6 @@ public class Skill {
   }
   @Override
   public String toString(){
-    return id + " : " + name + " : " + date + " : Employees [" + employee + "] ";
+    return " Skill : { " + id + " : " + name + " : " + date + " }";
   }
-  
 }

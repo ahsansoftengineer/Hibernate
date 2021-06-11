@@ -11,8 +11,11 @@
       <property name = "hibernate.connection.password">ahsan@aam</property>
       <property name="hbm2ddl.auto">update</property> <!-- create / update --> 
 
+      <!-- <property name="hibernate.cache.use_second_leve_cache">true</property>
+      <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ecache.EhCacheRegionFactory</property> -->
       <property name="show_sql">true</property> <!-- Query in the Console -->
       <property name="format_sql">true</property> <!-- Format the Query -->
+
       <!-- List of XML mapping files -->
       <!-- <mapping resource = "Employee.hbm.xml"/> -->
       

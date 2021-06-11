@@ -25,6 +25,6 @@ public class Department {
   }
   @Override
   public String toString(){
-    return this.id + " : " + this.name + " : " + this.employee; 
+    return " Department : { " +id + " : " + name + " : " + employee.toString() + " }"; 
   }
 }

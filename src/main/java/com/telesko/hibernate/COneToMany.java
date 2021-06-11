@@ -1,4 +1,4 @@
-package com.telesko.demo;
+package com.telesko.hibernate;
 
 import java.util.*;
 import com.telesko.types.*;
@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // 5. Embedable + OneToOne + OneToMany
 @SpringBootApplication
-public class DemoCOneToMany {
+public class COneToMany {
   public static void main(String[] args) {
     // In the Configuration We could have as many class as we want
     Configuration cfg =
