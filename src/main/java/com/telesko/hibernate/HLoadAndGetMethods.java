@@ -1,13 +1,9 @@
 package com.telesko.hibernate;
 
-import java.util.List;
-import java.util.Random;
-
 import com.telesko.school.*;
 
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // HQL is work on Class not on SQL Table and then hibernate Translate that into Native Database Language. HQL is the same for all type of Databases.
@@ -31,12 +27,12 @@ public class HLoadAndGetMethods {
   // Get Method hit database when it calls
   public static void hibernateGet(Session session) {
     Teacher teacher = session.get(Teacher.class, 101); // Giving you actual Object
-    // System.out.println(teacher); // Hitting Database
+    System.out.println(teacher); // Hitting Database
   }
     // Get Method not return Null Object instead throw Exception
     // Load Method doesn't excute until the object is utilize
     public static void hibernateLoad(Session session) {
       Teacher teacher = session.load(Teacher.class, 101); // Giving you proxy Object
-      // System.out.println(teacher); // Not hitting Database
+      System.out.println(teacher); // Not hitting Database
     }
 }
