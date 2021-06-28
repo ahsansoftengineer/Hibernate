@@ -23,6 +23,5 @@ public class IJPAJavaPerestentAPI {
     em.persist(teacher1);
     em.getTransaction().commit();
     return teacher1;
-
   }
 }
